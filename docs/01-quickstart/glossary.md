@@ -1,6 +1,3 @@
----
-slug: /quickstart/glossary
----
 # 名詞對照表：開發者視角的核心概念
 
 在跟顧問溝通時，他們用的業務術語在資料庫裡都有對應的「分身」。這份表幫你快速翻譯：
@@ -42,4 +39,4 @@ slug: /quickstart/glossary
 3.  **App Designer**：用來調整介面 (XML) 的工具，雖然是 GUI，但底層存儲在 `MAXPRESENTATION` 表。
 
 ---
-**下一篇：** [MAS 架構全覽：Manage, Monitor 與底層 OCP 的聯動](../concepts/mas-architecture-overview)
+**下一篇：** [MAS 架構全覽：Manage, Monitor 與底層 OCP 的聯動](../02-concepts/mas-architecture-overview.md)

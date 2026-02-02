@@ -1,6 +1,3 @@
----
-slug: /automation/validation-logic-sample
----
 # Automation Script (2)：欄位驗證與自動帶入邏輯實作
 
 這一篇我們透過一個經典的業務情境，學習如何撰寫實戰級的 Jython 腳本。
@@ -68,4 +65,4 @@ if schedStart and schedStart.before(now):
     - 到 **System Out 日誌** (或是 OCP 的 Pod Logs) 就能看到輸出。
 
 ---
-**下一篇：** [Workflow 開發：視覺化流程與腳本的深度聯動](./workflow-script-linkage)
+**下一篇：** [Workflow 開發：視覺化流程與腳本的深度聯動](./workflow-script-linkage.md)

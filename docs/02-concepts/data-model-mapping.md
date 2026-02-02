@@ -1,6 +1,3 @@
----
-slug: /concepts/data-model-mapping
----
 # 資料模型映射：顧問說的「資產」在資料庫裡長怎樣？
 
 開發者在進行整合時，最常面臨的挑戰是將外部資料 (如 ERP 或 IoT) 正確映射到 Maximo。這篇文章帶你從 Table 層級理解核心資料模型。
@@ -59,4 +56,4 @@ WHERE wo.status = 'APPR' AND wo.siteid = 'BEDFORD';
 ```
 
 ---
-**下一篇：** [REST API 實戰 (1)：認證模式選型](../integration/rest-api-auth)
+**下一篇：** [REST API 實戰 (1)：認證模式選型](../04-integration/rest-api-auth.md)

@@ -1,6 +1,3 @@
----
-slug: /quickstart/difference-maximo-mas
----
 # Maximo vs MAS：開發者一定要知道的 5 個核心差異
 
 如果你是從 Maximo 7.6.x 轉向 Maximo Application Suite (MAS)，你可能會發現「外表看起來差不多，但骨子裡全換了」。這篇文章幫你快速釐清兩者在開發與環境上的核心差異。
@@ -34,4 +31,4 @@ slug: /quickstart/difference-maximo-mas
 - **對開發者的影響**：跨模組的資料共享與整合變得更加標準化。
 
 ---
-**下一篇：** [名詞對照表：顧問說的「工單」在資料庫裡長怎樣？](./glossary)
+**下一篇：** [名詞對照表：顧問說的「工單」在資料庫裡長怎樣？](./glossary.md)
