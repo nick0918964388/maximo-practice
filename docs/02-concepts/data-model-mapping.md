@@ -1,3 +1,6 @@
+---
+slug: /concepts/data-model-mapping
+---
 # 資料模型映射：顧問說的「資產」在資料庫裡長怎樣？
 
 開發者在進行整合時，最常面臨的挑戰是將外部資料 (如 ERP 或 IoT) 正確映射到 Maximo。這篇文章帶你從 Table 層級理解核心資料模型。

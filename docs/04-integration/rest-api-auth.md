@@ -58,7 +58,7 @@ apikey: YOUR_SECRET_API_KEY_HERE
 
 1. **Header 名稱是否寫錯**：是 `apikey` 而不是 `API-KEY` 或 `Authorization`。
 2. **網域信任問題**：如果您透過 Cloudflare Tunnel (如 `line.nickai.cc`) 存取，請確認 Web Filter 沒有過濾自訂 Header。
-3. **使用者權限**：該 API Key 所屬的使用者是否具有「整合權限 (MAXINTERRUPT)」與對應 Object Structure 的訪問權。
+3. **使用者權限**：該 API Key所屬的使用者是否具有「整合權限 (MAXINTERRUPT)」與對應 Object Structure 的訪問權。
 
 ---
 
@@ -68,4 +68,4 @@ apikey: YOUR_SECRET_API_KEY_HERE
 - **如果是對外入口 (Public App)**：請選 **OIDC**，安全性最高，符合企業合規。
 
 ---
-**下一篇預告：** [REST API 實戰 (2)：CRUD 工單 (含必填欄位與檢核機制)](./rest-api-crud-wo)
+**下一篇預告：** [REST API 實戰 (2)：CRUD 工單 (含必填欄位與檢核機制)](./rest-api-crud-wo.md)

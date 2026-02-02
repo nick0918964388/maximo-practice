@@ -40,4 +40,4 @@ slug: /functional/wo-lifecycle
 3.  **PM 更新**：如果是從 PM 產生的工單，轉為 COMP 時會觸發下一個 PM 週期的計算。
 
 ---
-**下一篇預告：** [預防保養 (PM) 設定：如何讓系統自動產生明年的巡檢單？](./pm-jobplan-config)
+**下一篇預告：** [預防保養 (PM) 設定：如何讓系統自動產生明年的巡檢單？](./pm-jobplan-config.md)

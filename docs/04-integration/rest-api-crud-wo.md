@@ -1,59 +1,66 @@
 ---
 slug: /integration/rest-api-crud-wo
 ---
-# REST API 實戰 (2)：CRUD 工單 (?��?填�?位�?檢核機制)
+# REST API 實戰 (2)：CRUD 工單 (含必填欄位與檢核機制)
 
-學�?認�?後�??��?來就?��?�??實戰�?*如�??��? API 對工??(Work Order) ?��?增刪?�查??* ?�是?�?�整?��?案�??��???
+學會認證後，接下來就是真正的實戰：**如何透過 API 對工單 (Work Order) 進行增刪改查。** 這是所有整合專案的核心。
+
 ---
 
-## 1. ?�詢工單 (GET)
+## 1. 查詢工單 (GET)
 
-不�??�接請�??�?��?位�??��?導致?�能低落?��?使用 `oslc.select` 來精確篩?��?
-**範�?請�?�?*
+不要直接請求所有欄位，這會導致效能低落。請使用 `oslc.select` 來精確篩選。
+
+**範例請求：**
 `GET /maximo/oslc/os/mxwo?oslc.where=status="APPR"&oslc.select=wonum,description,status`
 
-**?�傳�??�?*
-你�?得到一?��???`member` ?????JSON，裡?�只?��??��??��?位�?
+**回傳解析：**
+你會得到一個包含 `member` 陣列的 JSON，裡面只有你指定的欄位。
+
 ---
 
-## 2. 建�?工單 (POST) - 必填欄�??�阱
+## 2. 建立工單 (POST) - 必填欄位陷阱
 
-建�?工單?��??�常�???`MBO validation error`??
-**標�? Payload 範本�?*
+建立工單時，最常遇到 `MBO validation error`。
+
+**標準 Payload 範本：**
 ```json
 {
   "siteid": "BEDFORD",
-  "description": "?��? API 建�??�測試工??,
+  "description": "透過 API 建立的測試工單",
   "worktype": "CM",
   "assetnum": "11400",
   "location": "BR450"
 }
 ```
 
-**?�� 專家?�示�?*
-- **SiteID ?��??��?**：即便�??��?一??Site，Maximo 依然要�??�確?��???- **?��?編�?**：�??��??�系統�?�?`WONUM` ?��?編�?，POST ?��??�要帶 `wonum` 欄�???
+**💡 專家提示：**
+- **SiteID 是必須的**：即便你只有一個 Site，Maximo 依然要求明確指定。
+- **自動編號**：如果你的系統有設 `WONUM` 自動編號，POST 時不需要帶 `wonum` 欄位。
+
 ---
 
-## 3. ?�新工單 (PATCH / POST with headers)
+## 3. 更新工單 (PATCH / POST with headers)
 
-??MAS/Maximo 中�??�新?��?記�?建議使用 `PATCH`??
-**?��?：�?工單?�?�改?�「已完�? (COMP)??*
+在 MAS/Maximo 中，更新現有記錄建議使用 `PATCH`。
+
+**情境：將工單狀態改為「已完成 (COMP)」**
 ```http
 PATCH /maximo/oslc/os/mxwo/_S0VORDUvMTAwMQ--
 Content-Type: application/json
 x-method-override: PATCH
 ```
-*註�?URL 後方?��?密�?串是該�??��? `_rowid` ?�透�? `href` ?��???
+*註：URL 後方的加密字串是該紀錄的 `_rowid` 或透過 `href` 取得。*
 
 ---
 
-## 4. 常�??�錯?�解�?
-| ?�錯訊息 | ?��? | �?��?��? |
+## 4. 常見報錯與解法
+
+| 報錯訊息 | 原因 | 解決方案 |
 | :--- | :--- | :--- |
-| `400 Bad Request` | JSON ?��??�誤?�缺少括??| 使用 JSON Validator 檢查?��? |
-| `MBO Read-only` | 該工?�已結�?，無法修??| 檢查 `status` ?�否??CLOSE ??CAN |
-| `Validation failed` | 欄�??�度超�??�數?��??��? | 檢查 `MAXATTRIBUTE` 定義?��?位長�?|
+| `400 Bad Request` | JSON 格式錯誤或缺少括號 | 使用 JSON Validator 檢查格式 |
+| `MBO Read-only` | 該工單已結案，無法修改 | 檢查 `status` 是否為 CLOSE 或 CAN |
+| `Validation failed` | 欄位長度超限或數值不合法 | 檢查 `MAXATTRIBUTE` 定義的欄位長度 |
 
 ---
-**下�?篇�??��?** [?��?模�?：�?�?(Sync) vs ?��?�?(Async) ?�場?�選?�](./sync-vs-async)
-
+**下一篇預告：** [整合模式：同步 (Sync) vs 非同步 (Async) 的場景選型](./sync-vs-async.md)
