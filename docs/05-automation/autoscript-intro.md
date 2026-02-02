@@ -1,3 +1,6 @@
+---
+slug: /automation/autoscript-intro
+---
 # Automation Script (1)：Python 還是 JavaScript？語法與效能評估
 
 在 MAS / Maximo 中，**Automation Script (自動化腳本)** 是開發者最常使用的「黑科技」。它不需要停機重啟，寫完即刻生效，能處理 90% 以上的客製化需求。

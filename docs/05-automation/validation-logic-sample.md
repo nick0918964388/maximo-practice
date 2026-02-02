@@ -1,9 +1,12 @@
+---
+slug: /automation/validation-logic-sample
+---
 # Automation Script (2)：欄位驗證與自動帶入邏輯實作
 
 這一篇我們透過一個經典的業務情境，學習如何撰寫實戰級的 Jython 腳本。
 
 ### 業務情境
-**需求**：在工單 (WORKORDER) 中，如果使用者選取的資產 (Asset) 類別是 `CRITICAL`，系統必須自動將工單的優先級 (Priority) 設為 `1`，且禁止使用者將預計開工日期設為過去的時間。
+**需求**：在工單 (WORKORDER) 中，如果使用者選取的資產 (Asset) 類別是 `CRITICAL`，系統必須自動將工單的優先級 (Priority)設為 `1`，且禁止使用者將預計開工日期設為過去的時間。
 
 ---
 

@@ -1,3 +1,6 @@
+---
+slug: /concepts/mas-architecture-overview
+---
 # MAS 架構全覽：Manage, Monitor 與底層 OCP 的聯動
 
 理解 Maximo Application Suite (MAS) 的架構是進行深度客製與效能調優的前提。MAS 不再是單一的應用程式，而是一個運行在 **Red Hat OpenShift (OCP)** 上的「套件組」。
@@ -46,4 +49,4 @@
 *   **現在**：透過 **Application Designer** 修改後即時生效；核心 Java 客製則需透過 **Docker Image build**。
 
 ---
-**下一篇：** [名詞對照表：開發者視角的核心資料模型](../01-quickstart/glossary)
+**下一篇：** [名詞對照表：開發者視角的核心資料模型](../quickstart/glossary)

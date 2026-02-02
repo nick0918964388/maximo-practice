@@ -1,3 +1,6 @@
+---
+slug: /integration/rest-api-auth
+---
 # REST API 實戰 (1)：認證模式選型 (Token vs OIDC)
 
 在進行 IBM Maximo / MAS 的整合開發時，第一關（也是最容易卡關的一關）就是 **「身份驗證 (Authentication)」**。

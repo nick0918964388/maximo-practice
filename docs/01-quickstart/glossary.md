@@ -1,3 +1,6 @@
+---
+slug: /quickstart/glossary
+---
 # 名詞對照表：開發者視角的核心概念
 
 在跟顧問溝通時，他們用的業務術語在資料庫裡都有對應的「分身」。這份表幫你快速翻譯：
@@ -27,7 +30,7 @@
 | 業務名詞 | 說明 | 資料庫核心 Table |
 | :--- | :--- | :--- |
 | **Item (物料)** | 零件的定義。 | `ITEM` |
-| **Inventory (庫存)** | 特定倉庫裡的物料數量。 | `INVENTORY` |
+| **Inventory (庫存)** | 特定倉庫 (`BIN`) 中的物料剩餘量與成本。 | `INVENTORY` |
 | **PO (採購單)** | 向供應商買東西的紀錄。 | `PO` |
 
 ---
@@ -39,4 +42,4 @@
 3.  **App Designer**：用來調整介面 (XML) 的工具，雖然是 GUI，但底層存儲在 `MAXPRESENTATION` 表。
 
 ---
-**下一篇：** [MAS 架構全覽：Manage, Monitor 與底層 OCP 的聯動](../02-concepts/mas-architecture-overview)
+**下一篇：** [MAS 架構全覽：Manage, Monitor 與底層 OCP 的聯動](../concepts/mas-architecture-overview)

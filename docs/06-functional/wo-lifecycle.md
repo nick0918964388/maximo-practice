@@ -1,3 +1,6 @@
+---
+slug: /functional/wo-lifecycle
+---
 # 工單生命週期：從報修到結案的 8 個標準狀態
 
 工單 (Work Order) 是 Maximo 的靈魂。理解工單狀態的轉換規律，是每位 Maximo 顧問的必修課。本篇將拆解最常見的 8 個標準狀態及其背後的業務意義。
